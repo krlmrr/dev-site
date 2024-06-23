@@ -24,9 +24,9 @@
         />
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="flex flex-col min-h-screen font-sans antialiased text-gray-700 bg-gray-100 dark:bg-gray-900 dark:text-gray-400">
-        <main class="flex-grow">
+    <body class="relative font-sans antialiased text-gray-700 bg-gray-100 dark:bg-gray-900 dark:text-gray-400">
+        <x-navigation.responsive-navbar>
             {{ $slot }}
-        </main>
+        </x-navigation.responsive-navbar>
     </body>
 </html>

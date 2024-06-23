@@ -5,4 +5,6 @@ use function Livewire\Volt\{title};
 title('Home');
 ?>
 
-<div></div>
+<div>
+    <p>Hello</p>
+</div>
