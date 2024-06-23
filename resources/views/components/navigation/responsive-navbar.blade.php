@@ -18,7 +18,9 @@
                         class="-m-2.5 p-2.5"
                         @click="open = ! open"
                     >
-                        <span class="sr-only">Close sidebar</span>
+                        <span class="sr-only">
+                            Close sidebar
+                        </span>
                         <svg
                             class="h-6 w-6 text-white"
                             fill="none"
@@ -47,8 +49,8 @@
         <x-navigation.sidebar />
     </div>
 
-    <div class="lg:pl-72">
-        <div class="sticky lg:hidden top-0 z-40 flex h-16 shrink-0 items-center justify-between gap-x-4 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-6 shadow-sm sm:gap-x-6 lg:px-8">
+    <div class="lg:pl-72 relative">
+        <div class="fixed lg:hidden w-full top-0 z-40 flex h-16 shrink-0 items-center justify-between gap-x-4 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-6 shadow-sm sm:gap-x-6 lg:px-8">
             <img
                 class="h-8 w-auto"
                 src="https://tailwindui.com/img/logos/mark.svg?color=white"
@@ -78,10 +80,9 @@
             </button>
         </div>
 
-        <main class="py-6">
-            <div class="px-6 lg:px-12">
-                {{ $slot }}
-            </div>
+        {{-- This only gives the bare minimum needed for the layout to work, so we can use the full width if needed.--}}
+        <main class="my-16 lg:my-0 lg:pl-8">
+            {{ $slot }}
         </main>
     </div>
 </div>
