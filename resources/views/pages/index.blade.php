@@ -12,7 +12,6 @@ state(['sections' => \App\Models\Section::all()])
         class="w-full"
         alt=""
     >
-    @volt
     <x-containers.page>
         @foreach($sections as $section)
             <x-containers.section
@@ -21,5 +20,4 @@ state(['sections' => \App\Models\Section::all()])
             />
         @endforeach
     </x-containers.page>
-    @endvolt
 </div>
