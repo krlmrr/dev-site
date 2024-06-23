@@ -37,16 +37,15 @@
                         </svg>
                     </button>
                 </div>
-
-                <!-- Sidebar component, swap this element with another sidebar if you like -->
-                <x-navigation.sidebar />
+                
+                <livewire:sidebar />
             </div>
         </div>
     </div>
 
     <!-- Static sidebar for desktop -->
     <div class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-80 lg:flex-col">
-        <x-navigation.sidebar />
+        <livewire:sidebar />
     </div>
 
     <div class="lg:pl-72 relative">

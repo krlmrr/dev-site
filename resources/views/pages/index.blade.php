@@ -1,8 +1,9 @@
 <?php
 
-use function Livewire\Volt\{title};
+use function Livewire\Volt\{title, state};
 
 title('Home');
+state(['sections' => \App\Models\Section::all()])
 ?>
 
 <div>
@@ -11,4 +12,14 @@ title('Home');
         class="w-full"
         alt=""
     >
+    @volt
+    <x-containers.page>
+        @foreach($sections as $section)
+            <x-containers.section
+                title="{{ $section->title }}"
+                body="{!! $section->body !!}"
+            />
+        @endforeach
+    </x-containers.page>
+    @endvolt
 </div>
