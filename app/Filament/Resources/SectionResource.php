@@ -50,6 +50,8 @@ class SectionResource extends Resource
     {
         return $table
             ->reorderable('sort')
+            //            ->persistSortInSession()
+            ->defaultSort('sort')
             ->columns([
                 TextColumn::make('title')
                     ->searchable()
@@ -57,6 +59,8 @@ class SectionResource extends Resource
 
                 TextColumn::make('body')
                     ->html(),
+                TextColumn::make('sort')
+                    ->sortable()
             ])
             ->filters([
                 //
