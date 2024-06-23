@@ -10,7 +10,7 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
-    protected $guarded= [
+    protected $guarded = [
         'id',
         'created_at',
         'updated_at',
