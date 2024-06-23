@@ -4,7 +4,7 @@ use App\Models\Section;
 use function Livewire\Volt\{state};
 
 state([
-    'sections' => Section::all()
+    'sections' => Section::query()->orderBy('sort')->get()
 ]);
 ?>
 

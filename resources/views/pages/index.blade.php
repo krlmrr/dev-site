@@ -1,9 +1,10 @@
 <?php
 
+use App\Models\Section;
 use function Livewire\Volt\{title, state};
 
 title('Home');
-state(['sections' => \App\Models\Section::all()])
+state(['sections' => Section::query()->orderBy('sort')->get()])
 ?>
 
 <div>
