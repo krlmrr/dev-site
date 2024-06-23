@@ -48,7 +48,7 @@
     </div>
 
     <div class="lg:pl-72">
-        <div class="sticky lg:hidden top-0 z-40 flex h-16 shrink-0 items-center justify-between gap-x-4 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8">
+        <div class="sticky lg:hidden top-0 z-40 flex h-16 shrink-0 items-center justify-between gap-x-4 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-6 shadow-sm sm:gap-x-6 lg:px-8">
             <img
                 class="h-8 w-auto"
                 src="https://tailwindui.com/img/logos/mark.svg?color=white"
@@ -79,7 +79,7 @@
         </div>
 
         <main class="py-6">
-            <div class="px-4 sm:px-6 lg:px-12">
+            <div class="px-6 lg:px-12">
                 {{ $slot }}
             </div>
         </main>
